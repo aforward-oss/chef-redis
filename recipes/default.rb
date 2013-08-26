@@ -19,3 +19,4 @@
 #
 
 include_recipe "redis::package"
+include_recipe "redis::monit" if node['redis']['include_monit']

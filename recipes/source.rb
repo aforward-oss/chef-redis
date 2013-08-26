@@ -107,3 +107,5 @@ if node['redis']['source']['create_service']
     notifies :restart, "service[redis]"
   end
 end
+
+include_recipe "redis::monit" if node['redis']['include_monit']

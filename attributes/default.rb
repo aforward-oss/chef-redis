@@ -24,3 +24,6 @@ default['redis']['daemonize']    = "yes"
 default['redis']['timeout']      = "300"
 default['redis']['loglevel']     = "notice"
 default['redis']['password']     = nil
+
+include_attribute "monit"
+default[:redis][:include_monit]  = false
